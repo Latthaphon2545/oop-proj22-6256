@@ -5,20 +5,21 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Register : MonoBehaviour
 {
-
-    public GameObject TextBox;
+    public GameObject TextBox1;
     public GameObject TextBox2;
-    public InputField usernameInput;
-    public InputField passwordInput;
+    public GameObject TextBox3;
+    public GameObject TextBox4;
+    public TMP_InputField usernameInput; 
+    public TMP_InputField passwordInput;
     public Button registerButton;
     public Button goToLoginButton;
     
 
     ArrayList credentials;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -58,19 +59,27 @@ public class Register : MonoBehaviour
 
         if (isExists)
         {   
-            TextBox.GetComponent<Text> ().text = "" + " ";
             Debug.Log($"Username '{usernameInput.text}' already exists");
-            TextBox2.GetComponent<Text> ().text = "" + $"Username '{usernameInput.text}' already exists";
+            TextBox3.GetComponent<Text> ().text = "" + "X";
+            TextBox4.GetComponent<Text> ().text = "" + "X";
+            Invoke("ClearText", 3);
         }
         else
         {
-            TextBox2.GetComponent<Text> ().text = "" + " ";
             credentials.Add(usernameInput.text + ":" + passwordInput.text);
             File.WriteAllLines(Application.dataPath + "/credentials.txt", (String[])credentials.ToArray(typeof(string)));
             Debug.Log("Account Registered");
-            TextBox.GetComponent<Text> ().text = "" + " Account Registered !!!!!!! ";
-
+            TextBox1.GetComponent<Text> ().text = "" + "✓";
+            TextBox2.GetComponent<Text> ().text = "" + "✓";
+            Invoke("ClearText", 3);
         }
     }
 
+    void ClearText()
+    {
+        TextBox1.GetComponent<Text> ().text = "" + " ";
+        TextBox2.GetComponent<Text> ().text = "" + " ";
+        TextBox3.GetComponent<Text> ().text = "" + " ";
+        TextBox4.GetComponent<Text> ().text = "" + " ";
+    }
 }
