@@ -5,18 +5,18 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Login : MonoBehaviour
 {
-
-    public GameObject TextBox;
-    public InputField usernameInput;
-    public InputField passwordInput;
+    public GameObject TextBox1;
+    public GameObject TextBox2;
+    public TMP_InputField usernameInput;
+    public TMP_InputField passwordInput;
     public Button loginButton;
     public Button goToRegisterButton;
 
     ArrayList credentials;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -32,9 +32,8 @@ public class Login : MonoBehaviour
             Debug.Log("Credential file doesn't exist");
         }
 
+        
     }
-
-
 
     // Update is called once per frame
     void login()
@@ -65,8 +64,16 @@ public class Login : MonoBehaviour
         else
         {
             Debug.Log("Incorrect credentials");
-            TextBox.GetComponent<Text> ().text = "" + " Incorrect credentials !!!!!!! ";
+            TextBox1.GetComponent<Text> ().text = "" + "X";
+            TextBox2.GetComponent<Text> ().text = "" + "X";
+            Invoke("ClearText", 3);
+            
         }
+    }
+    void ClearText()
+    {
+        TextBox1.GetComponent<Text> ().text = "" + "";
+        TextBox2.GetComponent<Text> ().text = "" + "";
     }
 
     void moveToRegister()
