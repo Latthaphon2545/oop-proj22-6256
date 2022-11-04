@@ -4,43 +4,40 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public CharacterController2D controllerScpt;
+    public Chr_Control controllerScpt;
     public Animator mainAnim;
     public float runSpeed = 30f;
     float horizontalMove = 0f;
     bool jump = false;
     bool stopjump = false;
 
-	// player can jump before touch ground
-	public float jumpBufferLength = 0.5f;
-	private float jumpBufferCount;
+    public float jumpBufferLength = 0.5f;
 
-    // emission part
-    public ParticleSystem walkPar;
-    public int walkParRate = 12;
+    public ParticleSystem walkparticle;
+    public int walkparticleRate = 12;
     private ParticleSystem.EmissionModule walkParEmission;
 
 
 
 
-    private void Start() 
+    private void Start()
     {
-        walkParEmission = walkPar.emission;
+        walkParEmission = walkparticle.emission;
     }
 
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         mainAnim.SetFloat("WalkSpeed", Mathf.Abs(horizontalMove));
-        
+
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
         }
 
-        if(horizontalMove != 0 && controllerScpt.m_Grounded)
+        if (horizontalMove != 0 && controllerScpt.motion_Grounded)
         {
-            walkParEmission.rateOverTime = walkParRate;
+            walkParEmission.rateOverTime = walkparticleRate;
         }
         else
         {
@@ -54,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void FixedUpdate() 
+    private void FixedUpdate()
     {
         controllerScpt.Move(horizontalMove * Time.fixedDeltaTime, false, jump, stopjump);
         jump = false;
