@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class Play_Movement : MonoBehaviour
 {
     public Chr_Control controllerScpt;
     public Animator mainAnim;
