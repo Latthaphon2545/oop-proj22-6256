@@ -15,8 +15,7 @@ public class Chr_Control : MonoBehaviour
 
     const float constant_GroundedRadius = .2f; 
     [HideInInspector]
-    public bool motion_Grounded
-        ;            
+    public bool motion_Grounded;            
     const float constant_CeilingRadius = .2f; 
     private Rigidbody2D motion_Rigidbody2D;
     private bool motion_FacingRight = true;  
