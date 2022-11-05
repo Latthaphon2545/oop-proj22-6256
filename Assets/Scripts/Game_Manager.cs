@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Game_Manager : MonoBehaviour
+
 {
     [SerializeField] Chr_Control playerControllScpt;
     [SerializeField] Play_Movement playerMoveScpt;
@@ -12,8 +14,12 @@ public class Game_Manager : MonoBehaviour
     [SerializeField] Rigidbody2D playerRigid;
     [SerializeField] Vector2 DeathForce;
 
+    [SerializeField] CinemachineVirtualCamera MainCamera;
+
     public void GameOver()
     {
+        MainCamera.m_Follow = null;
+
         playerControllScpt.enabled = false;
         playerMoveScpt.enabled = false;
 

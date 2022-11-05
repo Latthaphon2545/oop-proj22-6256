@@ -17,8 +17,7 @@ public class Play_Movement : MonoBehaviour
     public int walkparticleRate = 12;
     private ParticleSystem.EmissionModule walkParEmission;
 
-
-
+    public object isTrigger { get; internal set; }
 
     private void Start()
     {
