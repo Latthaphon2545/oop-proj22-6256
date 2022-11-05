@@ -9,15 +9,29 @@ using TMPro;
 
 public class intro : MonoBehaviour
 {
+    public Button goToLoginButton;
+    private float timer = 22;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        goToLoginButton.onClick.AddListener(goToLoginScene);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            SceneManager.LoadScene("Login");
+        }
     }
+
+    void goToLoginScene()
+    {
+        SceneManager.LoadScene("Login");
+    }
+
+    
 }
