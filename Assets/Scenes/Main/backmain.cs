@@ -6,14 +6,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class back : MonoBehaviour
+public class backmain : MonoBehaviour
 {
-    public Button BackButton;
+    public Button BackMainButton;
     
     // Start is called before the first frame update
     void Start()
     {
-        BackButton.onClick.AddListener(goToMain);
+        BackMainButton.onClick.AddListener(goToMain);
     }
 
     // Update is called once per frame
