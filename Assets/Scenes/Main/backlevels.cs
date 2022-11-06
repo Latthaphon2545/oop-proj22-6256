@@ -5,19 +5,18 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
-public class Main : MonoBehaviour
+public class backlevels : MonoBehaviour
 {
-    public Button goToLevelsButton;
+    public Button BackLevelsButton;
     
     // Start is called before the first frame update
     void Start()
     {
-        goToLevelsButton.onClick.AddListener(goToLevelsScene);
+        BackLevelsButton.onClick.AddListener(goToLevels);
     }
 
     // Update is called once per frame
-    void goToLevelsScene()
+    void goToLevels()
     {
         SceneManager.LoadScene("Level");
     }
