@@ -11,6 +11,7 @@ public class Login : MonoBehaviour
 {
     public GameObject TextBox1;
     public GameObject TextBox2;
+    public GameObject TextBox3;
     public TMP_InputField usernameInput;
     public TMP_InputField passwordInput;
     public Button loginButton;
@@ -22,6 +23,7 @@ public class Login : MonoBehaviour
     {
         loginButton.onClick.AddListener(login);
         goToRegisterButton.onClick.AddListener(moveToRegister);
+        Debug.Log(Username());
 
         if (File.Exists(Application.dataPath + "/credentials.txt"))
         {
@@ -32,7 +34,7 @@ public class Login : MonoBehaviour
             Debug.Log("Credential file doesn't exist");
         }
 
-        
+
     }
 
     // Update is called once per frame
@@ -41,13 +43,9 @@ public class Login : MonoBehaviour
         bool isExists = false;
 
         credentials = new ArrayList(File.ReadAllLines(Application.dataPath + "/credentials.txt"));
-
         foreach (var i in credentials)
         {
             string line = i.ToString();
-            //Debug.Log(line);
-            //Debug.Log(line.Substring(11));
-            //substring 0-indexof(:) - indexof(:)+1 - i.length-1
             if (i.ToString().Substring(0, i.ToString().IndexOf(":")).Equals(usernameInput.text) &&
                 i.ToString().Substring(i.ToString().IndexOf(":") + 1).Equals(passwordInput.text))
             {
@@ -59,21 +57,21 @@ public class Login : MonoBehaviour
         if (isExists)
         {
             Debug.Log($"Logging in '{usernameInput.text}'");
-            loadMainScreen();
+            TextBox3.GetComponent<Text>().text = $"{usernameInput.text}";
+            // loadMainScreen();
         }
         else
         {
             Debug.Log("Incorrect credentials");
-            TextBox1.GetComponent<Text> ().text = "" + "X";
-            TextBox2.GetComponent<Text> ().text = "" + "X";
+            TextBox1.GetComponent<Text>().text = "" + "✘";
+            TextBox2.GetComponent<Text>().text = "" + "✘";
             Invoke("ClearText", 3);
-            
         }
     }
     void ClearText()
     {
-        TextBox1.GetComponent<Text> ().text = "" + "";
-        TextBox2.GetComponent<Text> ().text = "" + "";
+        TextBox1.GetComponent<Text>().text = "" + "";
+        TextBox2.GetComponent<Text>().text = "" + "";
     }
 
     void moveToRegister()
@@ -85,4 +83,10 @@ public class Login : MonoBehaviour
     {
         SceneManager.LoadScene("Main");
     }
+
+    public string Username()
+    {
+        return usernameInput.text;
+    }
+
 }

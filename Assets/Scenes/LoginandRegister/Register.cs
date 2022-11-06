@@ -20,6 +20,8 @@ public class Register : MonoBehaviour
     
 
     ArrayList credentials;
+    ArrayList levels;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,17 +59,21 @@ public class Register : MonoBehaviour
             }
         }
 
+
         if (isExists)
         {   
             Debug.Log($"Username '{usernameInput.text}' already exists");
-            TextBox3.GetComponent<Text> ().text = "" + "X";
-            TextBox4.GetComponent<Text> ().text = "" + "X";
+            TextBox3.GetComponent<Text> ().text = "" + "✘";
+            TextBox4.GetComponent<Text> ().text = "" + "✘";
             Invoke("ClearText", 3);
         }
         else
         {
+            levels = new ArrayList(File.ReadAllLines(Application.dataPath + "/levels.txt"));
             credentials.Add(usernameInput.text + ":" + passwordInput.text);
+            levels.Add(usernameInput.text + ":" + 1);
             File.WriteAllLines(Application.dataPath + "/credentials.txt", (String[])credentials.ToArray(typeof(string)));
+            File.WriteAllLines(Application.dataPath + "/levels.txt", (String[])levels.ToArray(typeof(string)));
             Debug.Log("Account Registered");
             TextBox1.GetComponent<Text> ().text = "" + "✓";
             TextBox2.GetComponent<Text> ().text = "" + "✓";
