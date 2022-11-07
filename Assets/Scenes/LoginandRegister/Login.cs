@@ -11,19 +11,19 @@ public class Login : MonoBehaviour
 {
     public GameObject TextBox1;
     public GameObject TextBox2;
-    public GameObject TextBox3;
     public TMP_InputField usernameInput;
     public TMP_InputField passwordInput;
     public Button loginButton;
     public Button goToRegisterButton;
 
     ArrayList credentials;
+    ArrayList adduser;
     // Start is called before the first frame update
     void Start()
     {
         loginButton.onClick.AddListener(login);
+        // loginButton.onClick.AddListener(kuy);
         goToRegisterButton.onClick.AddListener(moveToRegister);
-        Debug.Log(Username());
 
         if (File.Exists(Application.dataPath + "/credentials.txt"))
         {
@@ -57,8 +57,10 @@ public class Login : MonoBehaviour
         if (isExists)
         {
             Debug.Log($"Logging in '{usernameInput.text}'");
-            TextBox3.GetComponent<Text>().text = $"{usernameInput.text}";
-            // loadMainScreen();
+            string username_a = usernameInput.text;
+            returnusername();
+            loadMainScreen();
+            // return  usernameInput.text;
         }
         else
         {
@@ -84,9 +86,9 @@ public class Login : MonoBehaviour
         SceneManager.LoadScene("Main");
     }
 
-    public string Username()
+    void returnusername()
     {
-        return usernameInput.text;
+        string path = Application.dataPath + "/adduser.txt";
+        File.WriteAllText(path, usernameInput.text);
     }
-
 }
