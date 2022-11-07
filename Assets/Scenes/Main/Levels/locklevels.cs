@@ -18,10 +18,8 @@ public class locklevels : MonoBehaviour
     {
         adduser = new ArrayList(File.ReadAllLines(Application.dataPath + "/adduser.txt"));
         string username_a = adduser[0].ToString();
-        // string username_a = sn.returnusername();
         foreach (Button b in Level1Button)
             b.interactable = false;
-
 
         levels = new ArrayList(File.ReadAllLines(Application.dataPath + "/levels.txt"));
         foreach (var i in levels)

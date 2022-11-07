@@ -1946,15 +1946,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250c759874d244902b497d354826bd45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextBox: {fileID: 756519385}
+  TextBox1: {fileID: 756519385}
   TextBox2: {fileID: 7645594}
   TextBox3: {fileID: 784332425}
   TextBox4: {fileID: 1057322945}
-  TheNumber1: 0
-  TheNumber2: 0
-  TheNumber3: 0
-  TheNumber4: 0
-  Total: 0
   answer: {fileID: 1121169987}
   SendAnswerButton: {fileID: 343140992}
   integer_Value_we_Want: 0
