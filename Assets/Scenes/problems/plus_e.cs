@@ -8,16 +8,16 @@ using TMPro;
 
 public class plus_e : MonoBehaviour
 {
-    public TextMeshProUGUI TextBox;
+    public TextMeshProUGUI TextBox1;
     // public GameObject TextBox2;
     public GameObject TextBox2;
     public GameObject TextBox3;
     public TextMeshProUGUI TextBox4;
-    public int TheNumber1;
-    public int TheNumber2;
-    public int TheNumber3;
-    public int TheNumber4;
-    public int Total;
+    private int TheNumber1;
+    private int TheNumber2;
+    private int TheNumber3;
+    private int TheNumber4;
+    private int Total;
     public TMP_InputField answer;
     public Button SendAnswerButton;
     public int integer_Value_we_Want;
@@ -40,7 +40,7 @@ public class plus_e : MonoBehaviour
         TheNumber2 = Random.Range(1, 11);
         TheNumber3 = Random.Range(1, 11);
         TheNumber4 = Random.Range(1, 11);
-        TextBox.GetComponent<TextMeshProUGUI>().text = "" + TheNumber1 + " + " + TheNumber2 + " + " + TheNumber3 + " + " + TheNumber4;
+        TextBox1.GetComponent<TextMeshProUGUI>().text = "" + TheNumber1 + " + " + TheNumber2 + " + " + TheNumber3 + " + " + TheNumber4;
         Total = TheNumber1 + TheNumber2 + TheNumber3 + TheNumber4;
         // TextBox2.GetComponent<TextMeshProUGUI> ().text = "" + Total;
     }
@@ -71,7 +71,7 @@ public class plus_e : MonoBehaviour
         TextBox4.GetComponent<TextMeshProUGUI>().text = "";
     }
 
-    public void show_heart(int health)
+    void show_heart(int health)
     {
         if (health == 5)
         {

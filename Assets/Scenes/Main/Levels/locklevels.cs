@@ -11,9 +11,9 @@ using TMPro;
 public class locklevels : MonoBehaviour
 {
     public Button[] Level1Button;
-    ArrayList adduser;
-    ArrayList levels;
-    string numberoflevels;
+    private ArrayList adduser;
+    private ArrayList levels;
+    private string numberoflevels;
     void Start()
     {
         adduser = new ArrayList(File.ReadAllLines(Application.dataPath + "/adduser.txt"));
