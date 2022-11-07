@@ -28,10 +28,10 @@ public class plus_e : MonoBehaviour
     public GameObject Heath5;
     [SerializeField] private int health;
 
+
     void Start()
     {
         SendAnswerButton.onClick.AddListener(ChackAnswer);
-        show_heart(health);
     }
 
     public void RandomGenerate()
@@ -57,7 +57,9 @@ public class plus_e : MonoBehaviour
         {
             TextBox3.GetComponent<Text>().text = "" + $"✘    ";
             TextBox4.GetComponent<TextMeshProUGUI>().text = "" + $"{Total}";
-            health = health - 1;
+            int x = 1;
+            health = health - x;
+            show_heart(health);
             Invoke("ClearText", 3);
         }
     }
@@ -69,7 +71,7 @@ public class plus_e : MonoBehaviour
         TextBox4.GetComponent<TextMeshProUGUI>().text = "";
     }
 
-    void show_heart(int health)
+    public void show_heart(int health)
     {
         if (health == 5)
         {
