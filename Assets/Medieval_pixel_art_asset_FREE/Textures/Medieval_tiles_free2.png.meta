@@ -587,7 +587,11 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   spritePixelsToUnits: 47.9
+=======
+  spritePixelsToUnits: 48
+>>>>>>> 55faded8e9528ddf7c026358f4874e797eb78f55
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -616,7 +620,11 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< HEAD
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+>>>>>>> 55faded8e9528ddf7c026358f4874e797eb78f55
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -628,7 +636,11 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< HEAD
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+>>>>>>> 55faded8e9528ddf7c026358f4874e797eb78f55
   - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 2048
@@ -640,7 +652,23 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< HEAD
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+>>>>>>> 55faded8e9528ddf7c026358f4874e797eb78f55
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -4513,8 +4541,13 @@ TextureImporter:
       Medieval_tiles_free2_124: 21300248
       Medieval_tiles_free2_44: 21300088
       Medieval_tiles_free2_148: 21300296
+<<<<<<< HEAD
       Medieval_tiles_free2_147: 21300294
       Medieval_tiles_free2_46: 21300092
+=======
+      Medieval_tiles_free2_46: 21300092
+      Medieval_tiles_free2_147: 21300294
+>>>>>>> 55faded8e9528ddf7c026358f4874e797eb78f55
       Medieval_tiles_free2_153: 21300306
       Medieval_tiles_free2_21: 21300042
       Medieval_tiles_free2_33: 21300066
@@ -4585,9 +4618,15 @@ TextureImporter:
       Medieval_tiles_free2_103: 21300206
       Medieval_tiles_free2_13: 21300026
       Medieval_tiles_free2_86: 21300172
+<<<<<<< HEAD
       Medieval_tiles_free2_141: 21300282
       Medieval_tiles_free2_49: 21300098
       Medieval_tiles_free2_16: 21300032
+=======
+      Medieval_tiles_free2_49: 21300098
+      Medieval_tiles_free2_16: 21300032
+      Medieval_tiles_free2_141: 21300282
+>>>>>>> 55faded8e9528ddf7c026358f4874e797eb78f55
       Medieval_tiles_free2_125: 21300250
       Medieval_tiles_free2_83: 21300166
       Medieval_tiles_free2_126: 21300252

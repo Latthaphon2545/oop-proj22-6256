@@ -5,61 +5,40 @@ using UnityEngine.UI;
 
 public class health : MonoBehaviour
 {
-    //public float nowHealth;
-    //[SerializeField] float startedHealth;
+    public float nowHealth;
+    [SerializeField] float startedHealth;
 
-    //// Start is called before the first frame update
-    //void Start()
-    //{
-    //    nowHealth = startedHealth;
-    //}
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    //if (Input.GetKey(KeyCode.E))
-    //    //{
-    //    //    damage();
-    //    //}
-    //}
-
-
-    //private void damage()
-    //{
-    //    if (Input.GetKey(KeyCode.E))
-    //    {
-    //        nowHealth = nowHealth - 1;
-
-    //        if (nowHealth > 0)
-    //        {
-    //            //hurt
-    //        }
-    //        else
-    //        {
-    //            //dead
-    //        }
-    //    }
-    //}
-    public static int healthh = 5;
-
-    public Image[] hearts;
-    public Sprite fullHeart;
-    public Sprite emptyHeart;
-
-    void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
-        healthh = 5;
+        nowHealth = startedHealth;
     }
+
     // Update is called once per frame
     void Update()
     {
-        foreach (Image img in hearts)
+        //if (Input.GetKey(KeyCode.E))
+        //{
+        //    damage();
+        //}
+    }
+
+
+    private void damage()
+    {
+        if (Input.GetKey(KeyCode.E))
         {
-            img.sprite = emptyHeart;
-        }
-        for (int i = 0; i < healthh; i++)
-        {
-            hearts[i].sprite = fullHeart;
+            nowHealth = nowHealth - 1;
+
+            if (nowHealth > 0)
+            {
+                //hurt
+            }
+            else
+            {
+                //dead
+            }
         }
     }
+
 }

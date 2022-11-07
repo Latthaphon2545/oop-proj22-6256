@@ -17,10 +17,7 @@ public class healthbar : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        //now.fillAmount = life. / 5;
-    }
+    //void Update() => now.fillAmount = life / 5;
 
 
 }
