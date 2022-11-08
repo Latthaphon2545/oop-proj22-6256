@@ -24,9 +24,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Main/Levels/Level.unity
     guid: ac72cb7f69b2d47e88dba4f4569966ba
   - enabled: 1
-    path: "Assets/Scenes/sta\u0E40e/Level 1/Level 1.unity"
+    path: "Assets/sta\u0E40e/Level 1/Level 1.unity"
     guid: ee3b7815b79b048df85653d06180c326
   - enabled: 1
+<<<<<<< HEAD
     path: "Assets/Scenes/sta\u0E40e/Level 1/e_+.unity"
     guid: c75e04e00603c4ffdbf568a95fc66559
   - enabled: 1
@@ -37,32 +38,38 @@ EditorBuildSettings:
     guid: 724bdaac98cbf4bb7b4fb870a391d88d
   - enabled: 1
     path: "Assets/Scenes/sta\u0E40e/Level 3/Level 3.unity"
+=======
+    path: "Assets/sta\u0E40e/Level 2/Level 2.unity"
+    guid: 2577e01ef4221456699abae96373fe0a
+  - enabled: 1
+    path: "Assets/sta\u0E40e/Level 3/Level 3.unity"
+>>>>>>> c0be3e394a93a9f27d14d83c35bf95e3c5c07bc9
     guid: 675786df3760f4673a75c7e2f3880a5d
   - enabled: 1
-    path: "Assets/Scenes/sta\u0E40e/Level 4/Level 4.unity"
+    path: "Assets/sta\u0E40e/Level 4/Level 4.unity"
     guid: b7c7b6257c651471998a6037a7623791
   - enabled: 1
-    path: "Assets/Scenes/sta\u0E40e/Level 5/Level 5.unity"
+    path: "Assets/sta\u0E40e/Level 5/Level 5.unity"
     guid: 9c3d1a84f30444d578b3a628ede57873
   - enabled: 1
-    path: "Assets/Scenes/sta\u0E40e/Level 6/Level 6.unity"
+    path: "Assets/sta\u0E40e/Level 6/Level 6.unity"
     guid: d828bc70c8d144bb0a0afc4d2baeb3a0
   - enabled: 1
-    path: "Assets/Scenes/sta\u0E40e/Level 7/Level 7.unity"
+    path: "Assets/sta\u0E40e/Level 7/Level 7.unity"
     guid: c69661ce9a4254afba377d36dbb97846
   - enabled: 1
-    path: "Assets/Scenes/sta\u0E40e/Level 8/Level 8.unity"
+    path: "Assets/sta\u0E40e/Level 8/Level 8.unity"
     guid: 8ec8a1ee3962b41c4b4ae7fe1d3b54cf
   - enabled: 1
-    path: "Assets/Scenes/sta\u0E40e/Level 9/Level 9.unity"
+    path: "Assets/sta\u0E40e/Level 9/Level 9.unity"
     guid: 91ddf1f0b92c147789171afe53dcf8ae
   - enabled: 1
-    path: "Assets/Scenes/sta\u0E40e/Level 10/Level 10.unity"
+    path: "Assets/sta\u0E40e/Level 10/Level 10.unity"
     guid: 579444f7173cf47f1829da17651d5a08
   - enabled: 1
-    path: "Assets/Scenes/sta\u0E40e/Level 11/Level 11.unity"
+    path: "Assets/sta\u0E40e/Level 11/Level 11.unity"
     guid: d4df0af15ee174ad7803b5ca94f6f00d
   - enabled: 1
-    path: "Assets/Scenes/sta\u0E40e/Level 12/Level 12.unity"
+    path: "Assets/sta\u0E40e/Level 12/Level 12.unity"
     guid: ba2f84a8b3bd548a7bd1e30b15dadd47
   m_configObjects: {}

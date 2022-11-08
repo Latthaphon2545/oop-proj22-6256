@@ -123,23 +123,18 @@ public class Chr_Control : MonoBehaviour
             motion_Rigidbody2D.velocity = Vector3.SmoothDamp(motion_Rigidbody2D.velocity, targetVelocity, ref motion_Velocity, motion_MovementSmoothing);
             if (move > 0 && !motion_FacingRight)
             {
-                // ... flip the player.
                 Flip();
             }
-            // Otherwise if the input is moving the player left and the player is facing right...
             else if (move < 0 && motion_FacingRight)
             {
-                // ... flip the player.
                 Flip();
             }
         }
 
 
-        // If the player should jump...
         if (hangCounter > 0 && jump)
         {
             impactEffect.Play();
-            // Add a vertical force to the player.
             motion_Grounded = false;
             motion_Rigidbody2D.AddForce(new Vector2(0f, motion_JumpForce));
             hangCounter = 0;
@@ -156,10 +151,8 @@ public class Chr_Control : MonoBehaviour
 
     private void Flip()
     {
-        // Switch the way the player is labelled as facing.
         motion_FacingRight = !motion_FacingRight;
 
-        // Multiply the player's x local scale by -1.
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
