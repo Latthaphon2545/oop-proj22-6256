@@ -88356,6 +88356,7 @@ GameObject:
   - component: {fileID: 2110368093}
   - component: {fileID: 2110368095}
   - component: {fileID: 2110368094}
+  - component: {fileID: 2110368096}
   m_Layer: 0
   m_Name: KillZone
   m_TagString: Untagged
@@ -88416,3 +88417,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 272.1391, y: 2.664555}
   m_EdgeRadius: 0
+--- !u!114 &2110368096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110368092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a444fac442d2a41ca94f353a14ed04bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Heath1: {fileID: 929438800}
+  Heath2: {fileID: 1878908293}
+  Heath3: {fileID: 1042934588}
+  Heath4: {fileID: 1306120556}
+  Heath5: {fileID: 763275173}
