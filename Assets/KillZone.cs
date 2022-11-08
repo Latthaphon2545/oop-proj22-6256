@@ -14,6 +14,7 @@ public class KillZone : MonoBehaviour
     public GameObject Heath5;
     public static bool Die_bo = false;
     public GameObject DieMenuUI;
+    public string again;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,5 +56,10 @@ public class KillZone : MonoBehaviour
         Time.timeScale = 1f;
         Debug.Log("Menu");
         SceneManager.LoadScene("Main");
+    }
+
+    public void playagain()
+    {
+        SceneManager.LoadScene("Level" + again);
     }
 }
