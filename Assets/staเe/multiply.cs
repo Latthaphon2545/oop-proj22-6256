@@ -48,7 +48,7 @@ public class multiply : MonoBehaviour
         {
             TheNumber1 = Random.Range(1, 11);
             TheNumber2 = Random.Range(1, 11);
-            TextAnswer.GetComponent<Text> ().text = "" + TheNumber1 + " x " + TheNumber2;
+            TextAnswer.GetComponent<TextMeshProUGUI> ().text = "" + TheNumber1 + " x " + TheNumber2;
             Total = TheNumber1 * TheNumber2;
             again = "7";
             next = "8";
@@ -58,7 +58,7 @@ public class multiply : MonoBehaviour
             TheNumber1 = Random.Range(1, 11);
             TheNumber2 = Random.Range(1, 11);
             TheNumber3 = Random.Range(1, 11);
-            TextAnswer.GetComponent<Text> ().text = "" + TheNumber1 + " x " + TheNumber2 + " x " + TheNumber3;
+            TextAnswer.GetComponent<TextMeshProUGUI> ().text = "" + TheNumber1 + " x " + TheNumber2 + " x " + TheNumber3;
             Total = TheNumber1 * TheNumber2 * TheNumber3;
             again = "8";
             next = "9";
@@ -69,7 +69,7 @@ public class multiply : MonoBehaviour
             TheNumber2 = Random.Range(1, 11);
             TheNumber3 = Random.Range(1, 11);
             TheNumber4 = Random.Range(1, 11);
-            TextAnswer.GetComponent<Text> ().text = "" + TheNumber1 + " x " + TheNumber2 + " x " + TheNumber3 + " x " + TheNumber4;
+            TextAnswer.GetComponent<TextMeshProUGUI> ().text = "" + TheNumber1 + " x " + TheNumber2 + " x " + TheNumber3 + " x " + TheNumber4;
             Total = TheNumber1 * TheNumber2 * TheNumber3 * TheNumber4;
             again = "9";
             next = "10";
