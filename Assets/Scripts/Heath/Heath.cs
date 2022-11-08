@@ -10,7 +10,7 @@ public class Heath : MonoBehaviour
     public GameObject Heath4;
     public GameObject Heath5;
 
-    [SerializeField] private int health;
+    public int health=5;
     Kill_Monster monster;
 
     // Start is called before the first frame update
@@ -42,26 +42,26 @@ public class Heath : MonoBehaviour
         else if (health == 3)
         {   Heath1.gameObject.SetActive(true);
             Heath2.gameObject.SetActive(true);
-            Heath3.gameObject.SetActive(false);
+            Heath2.gameObject.SetActive(true);
             Heath4.gameObject.SetActive(false);
             Heath5.gameObject.SetActive(false);
         }
         else if (health == 2)
         {   Heath1.gameObject.SetActive(true);
             Heath2.gameObject.SetActive(true);
-            Heath3.gameObject.SetActive(true);
+            Heath3.gameObject.SetActive(false);
             Heath4.gameObject.SetActive(false);
             Heath5.gameObject.SetActive(false);
         }
         else if (health == 1)
         {
             Heath1.gameObject.SetActive(true);
-            Heath2.gameObject.SetActive(true);
-            Heath3.gameObject.SetActive(true);
-            Heath4.gameObject.SetActive(true);
+            Heath2.gameObject.SetActive(false);
+            Heath3.gameObject.SetActive(false);
+            Heath4.gameObject.SetActive(false);
             Heath5.gameObject.SetActive(false);
         }
-        else
+        else if (health == 0)
         {
             Heath1.gameObject.SetActive(false);
             Heath2.gameObject.SetActive(false);

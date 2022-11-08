@@ -13,6 +13,7 @@ public class Kill_Monster : MonoBehaviour
         gameMangerScpt = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Game_Manager>();
         PlayerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Heath>();
     }
+    
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player")

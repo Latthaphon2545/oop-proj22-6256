@@ -53,19 +53,14 @@ public class e_Plus : MonoBehaviour
     {
         if (health == 1)
         {
-            IncorrectMenuUI.SetActive(true);
-            Time.timeScale = 1f;
-            Incorrect = true;
+            IncorrectMenu();
         }
 
         integer_Value_we_Want = int.Parse(answer.text);
         if (integer_Value_we_Want == Total)
         {
             TextT.GetComponent<TextMeshProUGUI>().text = "" + "CORRECT";
-            CorrectMenuUI.SetActive(true);
-            Time.timeScale = 1f;
-            Correct = true;
-            Invoke("ClearText", 3);
+            CorrectMenu();
         }
         else
         {
@@ -95,6 +90,20 @@ public class e_Plus : MonoBehaviour
     public void NextLevel()
     {
         SceneManager.LoadScene("Level2");
+    }
+
+    public void IncorrectMenu()
+    {
+        IncorrectMenuUI.SetActive(true);
+        Time.timeScale = 1f;
+        Incorrect = true;
+    }
+
+    public void CorrectMenu()
+    {
+        CorrectMenuUI.SetActive(true);
+        Time.timeScale = 1f;
+        Correct = true;
     }
 
 }
