@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 
-public class e_Mi : MonoBehaviour
+public class plus : MonoBehaviour
 {
     public TextMeshProUGUI TextAnswer;
     public TextMeshProUGUI TextT;
@@ -24,6 +24,9 @@ public class e_Mi : MonoBehaviour
     public static bool Correct = false;
     public GameObject IncorrectMenuUI;
     public GameObject CorrectMenuUI;
+    public int a;
+    private string again;
+    private string next;
 
 
     void Update()
@@ -40,32 +43,51 @@ public class e_Mi : MonoBehaviour
     }
 
     public void RandomGenerate()
-    {
-        TheNumber1 = Random.Range(1, 11);
-        TheNumber2 = Random.Range(1, 11);
-        TheNumber3 = Random.Range(1, 11);
-        TheNumber4 = Random.Range(1, 11);
-        TextAnswer.GetComponent<TextMeshProUGUI>().text = "" + TheNumber1 + " - " + TheNumber2 + " - " + TheNumber3 + " - " + TheNumber4;
-        Total = TheNumber1 - TheNumber2 - TheNumber3 - TheNumber4;
+    {   
+        if (a==1)
+        {
+            TheNumber1 = Random.Range(1, 11);
+            TheNumber2 = Random.Range(1, 11);
+            TheNumber3 = Random.Range(1, 11);
+            TheNumber4 = Random.Range(1, 11);
+            TextAnswer.GetComponent<TextMeshProUGUI>().text = "" + TheNumber1 + " + " + TheNumber2 + " + " + TheNumber3 + " + " + TheNumber4;
+            Total = TheNumber1 + TheNumber2 + TheNumber3 + TheNumber4;
+            again = "1";
+            next = "2";
+        }
+        else if (a==2)
+        {
+            TheNumber1 = Random.Range(10, 101);
+            TheNumber2 = Random.Range(10, 101);
+            TheNumber3 = Random.Range(10, 101);
+            TextAnswer.GetComponent<TextMeshProUGUI>().text = "" + TheNumber1 + " + " + TheNumber2 + " + " + TheNumber3;
+            Total = TheNumber1 + TheNumber2 + TheNumber3;
+            again = "2";
+            next = "3";
+        }
+        else if (a==3)
+        {
+            TheNumber1 = Random.Range(100, 1001);
+            TheNumber2 = Random.Range(100, 1001);
+            TextAnswer.GetComponent<TextMeshProUGUI>().text = "" + TheNumber1 + " + " + TheNumber2;
+            Total = TheNumber1 + TheNumber2;
+            again = "3";
+            next = "4";
+        }
     }
 
     public void ChackAnswer()
     {
         if (health == 1)
         {
-            IncorrectMenuUI.SetActive(true);
-            Time.timeScale = 1f;
-            Incorrect = true;
+            IncorrectMenu();
         }
 
         integer_Value_we_Want = int.Parse(answer.text);
         if (integer_Value_we_Want == Total)
         {
             TextT.GetComponent<TextMeshProUGUI>().text = "" + "CORRECT";
-            CorrectMenuUI.SetActive(true);
-            Time.timeScale = 1f;
-            Correct = true;
-            Invoke("ClearText", 3);
+            CorrectMenu();
         }
         else
         {
@@ -89,12 +111,26 @@ public class e_Mi : MonoBehaviour
 
     public void playagain()
     {
-        SceneManager.LoadScene("Level4");
+        SceneManager.LoadScene("Level"+again);
     }
 
     public void NextLevel()
     {
-        SceneManager.LoadScene("Level5");
+        SceneManager.LoadScene("Level"+next);
+    }
+
+    public void IncorrectMenu()
+    {
+        IncorrectMenuUI.SetActive(true);
+        Time.timeScale = 1f;
+        Incorrect = true;
+    }
+
+    public void CorrectMenu()
+    {
+        CorrectMenuUI.SetActive(true);
+        Time.timeScale = 1f;
+        Correct = true;
     }
 
 }
