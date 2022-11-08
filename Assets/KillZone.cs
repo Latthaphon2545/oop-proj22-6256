@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class KillZone : MonoBehaviour
 {
@@ -10,6 +12,8 @@ public class KillZone : MonoBehaviour
     public GameObject Heath3;
     public GameObject Heath4;
     public GameObject Heath5;
+    public static bool Die_bo = false;
+    public GameObject DieMenuUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +25,7 @@ public class KillZone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -34,6 +38,22 @@ public class KillZone : MonoBehaviour
             Heath3.gameObject.SetActive(false);
             Heath4.gameObject.SetActive(false);
             Heath5.gameObject.SetActive(false);
+            Die();
+
         }
+    }
+
+    public void Die()
+    {
+        DieMenuUI.SetActive(true);
+        Time.timeScale = 1f;
+        Die_bo = true;
+    }
+
+    public void LoadMenu()
+    {
+        Time.timeScale = 1f;
+        Debug.Log("Menu");
+        SceneManager.LoadScene("Main");
     }
 }
