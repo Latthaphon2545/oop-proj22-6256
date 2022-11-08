@@ -22,6 +22,6 @@ public class levels : MonoBehaviour
     void  OpenScene()
     {
         string sceneName = LevelText.text;
-        SceneManager.LoadScene("Level " + sceneName);
+        SceneManager.LoadScene("Level" + sceneName);
     }
 }

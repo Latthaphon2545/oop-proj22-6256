@@ -10,7 +10,7 @@ using TMPro;
 public class intro : MonoBehaviour
 {
     public Button goToLoginButton;
-    private float timer = 22;
+    private float timer = 16;
 
     // Start is called before the first frame update
     void Start()
