@@ -1,12 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
 
-public class plus : MonoBehaviour
+public class plus_copy : MonoBehaviour
 {
     public TextMeshProUGUI TextAnswer;
     public TextMeshProUGUI TextT;
@@ -29,6 +31,7 @@ public class plus : MonoBehaviour
     private string next;
     private ArrayList adduser;
     private ArrayList levels;
+    private string numberoflevels;
 
 
 
@@ -49,10 +52,10 @@ public class plus : MonoBehaviour
     {   
         if (a==1)
         {
-            TheNumber1 = Random.Range(1, 11);
-            TheNumber2 = Random.Range(1, 11);
-            TheNumber3 = Random.Range(1, 11);
-            TheNumber4 = Random.Range(1, 11);
+            TheNumber1 = UnityEngine.Random.Range(1, 11);
+            TheNumber2 = UnityEngine.Random.Range(1, 11);
+            TheNumber3 = UnityEngine.Random.Range(1, 11);
+            TheNumber4 = UnityEngine.Random.Range(1, 11);
             TextAnswer.GetComponent<TextMeshProUGUI>().text = "" + TheNumber1 + " + " + TheNumber2 + " + " + TheNumber3 + " + " + TheNumber4;
             Total = TheNumber1 + TheNumber2 + TheNumber3 + TheNumber4;
             again = "1";
@@ -60,9 +63,9 @@ public class plus : MonoBehaviour
         }
         else if (a==2)
         {
-            TheNumber1 = Random.Range(10, 101);
-            TheNumber2 = Random.Range(10, 101);
-            TheNumber3 = Random.Range(10, 101);
+            TheNumber1 = UnityEngine.Random.Range(10, 101);
+            TheNumber2 = UnityEngine.Random.Range(10, 101);
+            TheNumber3 = UnityEngine.Random.Range(10, 101);
             TextAnswer.GetComponent<TextMeshProUGUI>().text = "" + TheNumber1 + " + " + TheNumber2 + " + " + TheNumber3;
             Total = TheNumber1 + TheNumber2 + TheNumber3;
             again = "2";
@@ -70,8 +73,8 @@ public class plus : MonoBehaviour
         }
         else if (a==3)
         {
-            TheNumber1 = Random.Range(100, 1001);
-            TheNumber2 = Random.Range(100, 1001);
+            TheNumber1 = UnityEngine.Random.Range(100, 1001);
+            TheNumber2 = UnityEngine.Random.Range(100, 1001);
             TextAnswer.GetComponent<TextMeshProUGUI>().text = "" + TheNumber1 + " + " + TheNumber2;
             Total = TheNumber1 + TheNumber2;
             again = "3";
@@ -90,6 +93,7 @@ public class plus : MonoBehaviour
         if (integer_Value_we_Want == Total)
         {
             TextT.GetComponent<TextMeshProUGUI>().text = "" + "CORRECT";
+            writeStuffToFile();
             CorrectMenu();
         }
         else
@@ -149,8 +153,12 @@ public class plus : MonoBehaviour
                 int memeValue;
                 int.TryParse(numberoflevels, out memeValue);
                 memeValue++;
-                levels[levels.IndexOf(i)] = username_a + ":" + memeValue;
-                break;
+                i.ToString().Substring(i.ToString().IndexOf(":") + 1).Replace(numberoflevels, memeValue.ToString());
+                // levels[levels.IndexOf(i)] = username_a + ":" + memeValue;
+                // levels.Add(username_a + ":" + memeValue);
+                // File.WriteAllLines(Application.dataPath + "/levels.txt", (String[])levels.ToArray(typeof(string)));
+                string new_str = username_a + ":" + memeValue;
+                Debug.Log(new_str);
             }
         }
 
