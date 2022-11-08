@@ -29,7 +29,7 @@ public class divi : MonoBehaviour
     private ArrayList adduser;
     private ArrayList read_levels;
     private string numberoflevels;
-    private int c=-1;
+    private bool endgame = false;
 
 
     void Update()
@@ -70,6 +70,7 @@ public class divi : MonoBehaviour
             Total = (double)TheNumber1 / 2;
             again = "12";
             next = "Main";
+            endgame = true;
         }
     }
 
@@ -85,7 +86,14 @@ public class divi : MonoBehaviour
         {
             TextT.GetComponent<TextMeshProUGUI>().text = "" + "CORRECT";
             writeStuffToFile();
-            CorrectMenu();
+            if (endgame)
+            {
+                EndSession();
+            }
+            else
+            {
+                CorrectMenu();
+            }
         }
         else
         {
@@ -136,21 +144,31 @@ public class divi : MonoBehaviour
         adduser = new ArrayList(File.ReadAllLines(Application.dataPath + "/adduser.txt"));
         string username_a = adduser[0].ToString();
         read_levels = new ArrayList(File.ReadAllLines(Application.dataPath + "/levels.txt"));
+        List<int> list1 = new List<int>();
         foreach (var i in read_levels)
         {
-            c++;
             if (i.ToString().Substring(0, i.ToString().IndexOf(":")).Equals(username_a))
             {
                 numberoflevels = i.ToString().Substring(i.ToString().IndexOf(":") + 1);
-                int memeValue;
-                int.TryParse(numberoflevels, out memeValue);
-                memeValue++;
-                string new_levels = username_a + ":" + memeValue;
-                read_levels.Add(new_levels);
-                File.WriteAllLines(Application.dataPath + "/levels.txt", (String[])read_levels.ToArray(typeof(string)));
-                break;
+                int numberoflevel;
+                int.TryParse(numberoflevels, out numberoflevel);
+                numberoflevel++;
+                list1.Add(numberoflevel); 
             }
         }
+        list1.Sort();
+        list1.Reverse();
+        string new_levels = username_a + ":" + list1[0];
+        if (list1[0] <= 12 )
+        {
+            read_levels.Add(new_levels);
+            File.WriteAllLines(Application.dataPath + "/levels.txt", (String[])read_levels.ToArray(typeof(string)));
+        }
+    }
+
+    public void EndSession()
+    {
+        SceneManager.LoadScene("End");
     }
 
 }

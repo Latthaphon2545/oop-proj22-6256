@@ -92,4 +92,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/sta\u0E40e/Level 12/h_Di.unity"
     guid: a433e39606d27463c951a691df9e3baa
+  - enabled: 1
+    path: "Assets/sta\u0E40e/End/End.unity"
+    guid: 4296b8be25fc24675b3a03364f4b5920
   m_configObjects: {}

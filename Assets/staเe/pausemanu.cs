@@ -11,9 +11,14 @@ public class pausemanu : MonoBehaviour
 {   
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public Button PauseButton;
 
 
     // Update is called once per frame
+    void Start()
+    {
+        PauseButton.onClick.AddListener(Pause);
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
