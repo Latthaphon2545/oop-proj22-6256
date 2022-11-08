@@ -21,8 +21,6 @@ public class Login : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        loginButton.onClick.AddListener(login);
-        // loginButton.onClick.AddListener(kuy);
         goToRegisterButton.onClick.AddListener(moveToRegister);
 
         if (File.Exists(Application.dataPath + "/credentials.txt"))
@@ -37,8 +35,16 @@ public class Login : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            login();
+        }
+    }
+
     // Update is called once per frame
-    void login()
+    public void login()
     {
         bool isExists = false;
 

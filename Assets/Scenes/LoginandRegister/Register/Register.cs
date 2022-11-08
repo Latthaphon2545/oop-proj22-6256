@@ -25,7 +25,6 @@ public class Register : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        registerButton.onClick.AddListener(writeStuffToFile);
         goToLoginButton.onClick.AddListener(goToLoginScene);
 
         if (File.Exists(Application.dataPath + "/credentials.txt"))
@@ -38,6 +37,13 @@ public class Register : MonoBehaviour
         }
 
     }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            writeStuffToFile();
+        }
+    }
 
     void goToLoginScene()
     {
@@ -45,7 +51,7 @@ public class Register : MonoBehaviour
     }
 
 
-    void writeStuffToFile()
+    public void writeStuffToFile()
     {
         bool isExists = false;
 
