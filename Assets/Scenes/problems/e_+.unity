@@ -488,7 +488,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 343140993}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1536837861}
+        m_TargetAssemblyTypeName: plus_e, Assembly-CSharp
+        m_MethodName: ChackAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &343140993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,7 +618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Input Answer
+  m_text: '  Input Answer'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a5c9a5a6e639f4f629eb6e49132360d4, type: 2}
   m_sharedMaterial: {fileID: -1883127393510861449, guid: a5c9a5a6e639f4f629eb6e49132360d4, type: 2}
@@ -669,7 +681,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -6.554413, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1623,7 +1635,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 411, y: 212}
+  m_AnchoredPosition: {x: 384, y: 254.5}
   m_SizeDelta: {x: 1599.9999, y: 899.99994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1164188243
