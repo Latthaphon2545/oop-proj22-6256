@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadNewStage : MonoBehaviour
 {
-    //public string namelevels;
+    public string namelevels;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +27,7 @@ public class LoadNewStage : MonoBehaviour
     }
     private void LoadStage()
     {
-        SceneManager.LoadScene("e_PLUS");//change("เปลี่ยนเป็นที่ต่อไปที่อยากไป")
+        SceneManager.LoadScene(namelevels);//change("เปลี่ยนเป็นที่ต่อไปที่อยากไป")
 
     }
 
