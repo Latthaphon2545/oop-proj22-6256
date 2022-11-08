@@ -134413,7 +134413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1419370000}
   - component: {fileID: 1419370002}
-  - component: {fileID: 1419370001}
+  - component: {fileID: 1419370003}
   m_Layer: 0
   m_Name: KillZone
   m_TagString: Untagged
@@ -134436,18 +134436,6 @@ Transform:
   m_Father: {fileID: 112798716}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1419370001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1419369999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51b483eb484894780b15547959e3bc06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1419370002
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -134474,6 +134462,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 272.1391, y: 2.664555}
   m_EdgeRadius: 0
+--- !u!114 &1419370003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419369999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a444fac442d2a41ca94f353a14ed04bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Heath1: {fileID: 0}
+  Heath2: {fileID: 0}
+  Heath3: {fileID: 0}
+  Heath4: {fileID: 0}
+  Heath5: {fileID: 0}
+  DieMenuUI: {fileID: 0}
+  again: 
 --- !u!1 &1421743093
 GameObject:
   m_ObjectHideFlags: 0
