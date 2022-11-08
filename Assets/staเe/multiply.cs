@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -27,6 +29,10 @@ public class multiply : MonoBehaviour
     public int a;
     private string again;
     private string next;
+    private ArrayList adduser;
+    private ArrayList read_levels;
+    private string numberoflevels;
+    private int c=-1;
 
 
     void Update()
@@ -46,8 +52,8 @@ public class multiply : MonoBehaviour
     {   
         if (a==1)
         {
-            TheNumber1 = Random.Range(1, 11);
-            TheNumber2 = Random.Range(1, 11);
+            TheNumber1 = UnityEngine.Random.Range(1, 11);
+            TheNumber2 = UnityEngine.Random.Range(1, 11);
             TextAnswer.GetComponent<TextMeshProUGUI> ().text = "" + TheNumber1 + " x " + TheNumber2;
             Total = TheNumber1 * TheNumber2;
             again = "7";
@@ -55,9 +61,9 @@ public class multiply : MonoBehaviour
         }
         else if (a==2)
         {
-            TheNumber1 = Random.Range(1, 11);
-            TheNumber2 = Random.Range(1, 11);
-            TheNumber3 = Random.Range(1, 11);
+            TheNumber1 = UnityEngine.Random.Range(1, 11);
+            TheNumber2 = UnityEngine.Random.Range(1, 11);
+            TheNumber3 = UnityEngine.Random.Range(1, 11);
             TextAnswer.GetComponent<TextMeshProUGUI> ().text = "" + TheNumber1 + " x " + TheNumber2 + " x " + TheNumber3;
             Total = TheNumber1 * TheNumber2 * TheNumber3;
             again = "8";
@@ -65,10 +71,10 @@ public class multiply : MonoBehaviour
         }
         else if (a==3)
         {
-            TheNumber1 = Random.Range(1, 11);
-            TheNumber2 = Random.Range(1, 11);
-            TheNumber3 = Random.Range(1, 11);
-            TheNumber4 = Random.Range(1, 11);
+            TheNumber1 = UnityEngine.Random.Range(1, 11);
+            TheNumber2 = UnityEngine.Random.Range(1, 11);
+            TheNumber3 = UnityEngine.Random.Range(1, 11);
+            TheNumber4 = UnityEngine.Random.Range(1, 11);
             TextAnswer.GetComponent<TextMeshProUGUI> ().text = "" + TheNumber1 + " x " + TheNumber2 + " x " + TheNumber3 + " x " + TheNumber4;
             Total = TheNumber1 * TheNumber2 * TheNumber3 * TheNumber4;
             again = "9";
@@ -76,7 +82,7 @@ public class multiply : MonoBehaviour
         }
     }
 
-    public void ChackAnswer()
+     public void ChackAnswer()
     {
         if (health == 1)
         {
@@ -87,6 +93,7 @@ public class multiply : MonoBehaviour
         if (integer_Value_we_Want == Total)
         {
             TextT.GetComponent<TextMeshProUGUI>().text = "" + "CORRECT";
+            writeStuffToFile();
             CorrectMenu();
         }
         else
@@ -133,4 +140,25 @@ public class multiply : MonoBehaviour
         Correct = true;
     }
 
+    public void writeStuffToFile()
+    {
+        adduser = new ArrayList(File.ReadAllLines(Application.dataPath + "/adduser.txt"));
+        string username_a = adduser[0].ToString();
+        read_levels = new ArrayList(File.ReadAllLines(Application.dataPath + "/levels.txt"));
+        foreach (var i in read_levels)
+        {
+            c++;
+            if (i.ToString().Substring(0, i.ToString().IndexOf(":")).Equals(username_a))
+            {
+                numberoflevels = i.ToString().Substring(i.ToString().IndexOf(":") + 1);
+                int memeValue;
+                int.TryParse(numberoflevels, out memeValue);
+                memeValue++;
+                string new_levels = username_a + ":" + memeValue;
+                read_levels.Add(new_levels);
+                File.WriteAllLines(Application.dataPath + "/levels.txt", (String[])read_levels.ToArray(typeof(string)));
+                break;
+            }
+        }
+    }
 }
