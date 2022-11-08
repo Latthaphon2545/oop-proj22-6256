@@ -82,7 +82,7 @@ public class m_Plus : MonoBehaviour
 
     public void playagain()
     {
-        SceneManager.LoadScene("Level 2");
+        SceneManager.LoadScene("Level2");
     }
 
 }

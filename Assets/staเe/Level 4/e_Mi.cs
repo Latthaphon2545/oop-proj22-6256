@@ -89,12 +89,12 @@ public class e_Mi : MonoBehaviour
 
     public void playagain()
     {
-        SceneManager.LoadScene("Level 4");
+        SceneManager.LoadScene("Level4");
     }
 
     public void NextLevel()
     {
-        SceneManager.LoadScene("Level 5");
+        SceneManager.LoadScene("Level5");
     }
 
 }

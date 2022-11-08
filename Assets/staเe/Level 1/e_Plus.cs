@@ -89,12 +89,12 @@ public class e_Plus : MonoBehaviour
 
     public void playagain()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Level1");
     }
 
     public void NextLevel()
     {
-        SceneManager.LoadScene("Level 2");
+        SceneManager.LoadScene("Level2");
     }
 
 }
