@@ -28,7 +28,7 @@ public class Register : MonoBehaviour
         goToLoginButton.onClick.AddListener(goToLoginScene);
         registerButton.onClick.AddListener(writeStuffToFile);
 
-        if (File.Exists(Application.dataPath + "/credentials.txt"))
+        if (File.Exists(Application.dataPath + "/credentials.txt") && File.Exists(Application.dataPath + "/levels.txt") && File.Exists(Application.dataPath + "/adduser.txt"))
         {
             credentials = new ArrayList(File.ReadAllLines(Application.dataPath + "/credentials.txt"));
             levels = new ArrayList(File.ReadAllLines(Application.dataPath + "/levels.txt"));
@@ -37,6 +37,8 @@ public class Register : MonoBehaviour
         else
         {
             File.WriteAllText(Application.dataPath + "/credentials.txt", "");
+            File.WriteAllText(Application.dataPath + "/levels.txt", "");
+            File.WriteAllText(Application.dataPath + "/adduser.txt", "");
         }
 
     }
