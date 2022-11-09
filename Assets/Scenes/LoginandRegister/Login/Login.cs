@@ -26,7 +26,7 @@ public class Login : MonoBehaviour
         goToRegisterButton.onClick.AddListener(moveToRegister);
         LoginButton.onClick.AddListener(login);
 
-        if (File.Exists(Application.dataPath + "/credentials.txt") && File.Exists(Application.dataPath + "/levels.txt") && File.Exists(Application.dataPath + "/adduser.txt"))
+        if (File.Exists(Application.dataPath + "/credentials.txt"))
         {
             credentials = new ArrayList(File.ReadAllLines(Application.dataPath + "/credentials.txt"));
             levels = new ArrayList(File.ReadAllLines(Application.dataPath + "/levels.txt"));
