@@ -21,7 +21,7 @@ public class Register : MonoBehaviour
 
     ArrayList credentials;
     ArrayList levels;
-
+    ArrayList adduser;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +31,8 @@ public class Register : MonoBehaviour
         if (File.Exists(Application.dataPath + "/credentials.txt"))
         {
             credentials = new ArrayList(File.ReadAllLines(Application.dataPath + "/credentials.txt"));
+            levels = new ArrayList(File.ReadAllLines(Application.dataPath + "/levels.txt"));
+            adduser = new ArrayList(File.ReadAllLines(Application.dataPath + "/adduser.txt"));
         }
         else
         {

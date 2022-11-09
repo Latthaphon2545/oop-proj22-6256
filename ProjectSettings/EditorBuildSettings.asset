@@ -20,79 +20,79 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main/Levels/Level.unity
     guid: ac72cb7f69b2d47e88dba4f4569966ba
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 1/Level1.unity"
     guid: 341777b9dfa0945578bf48a0647037fa
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 1/e_PLUS.unity"
     guid: 40c2c5061ff4f408c9f12b0fac27b9ab
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 2/Level2.unity"
     guid: 6238d57141d31497197e2a8739bae0c2
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 2/m_PLUS.unity"
     guid: 8a11f24716baf4d79b1df06c5eac33fa
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 3/Level3.unity"
     guid: 5edd3c675aad14055b7314612144183c
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 3/h_PLUS.unity"
     guid: f4575474eae774e5da2b454e9ccf0cc5
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 4/Level4.unity"
     guid: 13aafa2d23d48452bb50a5841f63e161
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 4/e_MI.unity"
     guid: e7279a210f1954f0d9eee9a6e85af5a2
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 5/Level5.unity"
     guid: 2ff17ed38281c410ab3e5771ac3f33f2
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 5/m_MI.unity"
     guid: ce9914bd411d04c508c17622ac75e875
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 6/Level6.unity"
     guid: 357d2e4f12bf04b169b164f553aee91d
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 6/h_MI.unity"
     guid: 371ec26d02da54741b7752868df19fe1
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 7/Level7.unity"
     guid: f5de0732e6375479fb92ed125fb88614
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 7/e_Mu.unity"
     guid: a6d16e1b5997c48efb600d3c16349649
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 8/Level8.unity"
     guid: f6d086cf61be6461b94bcdeb77a89019
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 8/m_Mu.unity"
     guid: 8814cc1565aab494fbe3f5ea1310e373
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 9/Level9.unity"
     guid: 7053372663ef24e3b996dd09a1e87f80
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 9/h_Mu.unity"
     guid: 10649cba7e61241098bfa55d946cf9b7
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 10/Level10.unity"
     guid: f12656b9ad35f407b91396d1975ba569
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 10/e_Di.unity"
     guid: d465d0a14f2264fb7947cc44a7dddeca
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 11/Level11.unity"
     guid: 0413dae67e1a94ea5a45cc1edda367a8
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 11/m_Di.unity"
     guid: 69f3e3c82e5124b15a6eda8adea26eaa
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 12/Level12.unity"
     guid: 7ec714a26c2b743708949381fc932089
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/Level 12/h_Di.unity"
     guid: a433e39606d27463c951a691df9e3baa
-  - enabled: 0
+  - enabled: 1
     path: "Assets/sta\u0E40e/End/End.unity"
     guid: 4296b8be25fc24675b3a03364f4b5920
   m_configObjects: {}
