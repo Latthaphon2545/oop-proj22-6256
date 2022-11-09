@@ -15,6 +15,7 @@ public class Login : MonoBehaviour
     public TMP_InputField passwordInput;
     public Button loginButton;
     public Button goToRegisterButton;
+    public Button LoginButton;
 
     ArrayList credentials;
     ArrayList adduser;
@@ -22,6 +23,7 @@ public class Login : MonoBehaviour
     void Start()
     {
         goToRegisterButton.onClick.AddListener(moveToRegister);
+        LoginButton.onClick.AddListener(login);
 
         if (File.Exists(Application.dataPath + "/credentials.txt"))
         {
