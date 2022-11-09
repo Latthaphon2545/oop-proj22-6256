@@ -44,7 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/state/Level 4/e_MI.unity
     guid: e7279a210f1954f0d9eee9a6e85af5a2
-  - enabled: 0
+  - enabled: 1
     path: Assets/state/Level 5/Level5.unity
     guid: 2ff17ed38281c410ab3e5771ac3f33f2
   - enabled: 1
