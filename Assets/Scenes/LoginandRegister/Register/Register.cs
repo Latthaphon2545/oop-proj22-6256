@@ -26,6 +26,7 @@ public class Register : MonoBehaviour
     void Start()
     {
         goToLoginButton.onClick.AddListener(goToLoginScene);
+        registerButton.onClick.AddListener(writeStuffToFile);
 
         if (File.Exists(Application.dataPath + "/credentials.txt"))
         {
