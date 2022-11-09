@@ -19,15 +19,18 @@ public class Login : MonoBehaviour
 
     ArrayList credentials;
     ArrayList adduser;
+    ArrayList levels;
     // Start is called before the first frame update
     void Start()
     {
         goToRegisterButton.onClick.AddListener(moveToRegister);
         LoginButton.onClick.AddListener(login);
 
-        if (File.Exists(Application.dataPath + "/credentials.txt"))
+        if (File.Exists(Application.dataPath + "/credentials.txt") && File.Exists(Application.dataPath + "/levels.txt") && File.Exists(Application.dataPath + "/adduser.txt"))
         {
             credentials = new ArrayList(File.ReadAllLines(Application.dataPath + "/credentials.txt"));
+            levels = new ArrayList(File.ReadAllLines(Application.dataPath + "/levels.txt"));
+            adduser = new ArrayList(File.ReadAllLines(Application.dataPath + "/adduser.txt"));
         }
         else
         {
